@@ -19,7 +19,7 @@ inherit setuptools pkgconfig systemd
 SYSTEMD_PACKAGES = "${PN}"
 SYSTEMD_SERVICE_${PN} = "blinkenlights.service"
 
-FILES_${PN} = " ${systemd_system_unitdir}/blinkenlights.service "
+FILES_${PN} += " ${systemd_system_unitdir}/blinkenlights.service "
 
 do_install_append () {
    install -d ${D}${systemd_system_unitdir}
