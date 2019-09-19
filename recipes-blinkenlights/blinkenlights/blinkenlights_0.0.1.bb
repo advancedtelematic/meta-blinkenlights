@@ -5,11 +5,13 @@ SUMMARY = "Lights for dogfood day"
 HOMEPAGE = "http://example.com/"
 LICENSE = "MIT"
 SECTION = ""
-DEPENDS = "python-native python-setuptools-native cmake-native"
+#DEPENDS = "python-native python-setuptools-native cmake-native"
+DEPENDS = ""
 
-inherit cmake setuptools pythonnative
+#inherit cmake setuptools pythonnative
 
 SRCREV="${AUTOREV}"
+SRC_URI[md5sum] = "8c125b5da8c2f681a56a8c9bc1b72ef6"
 SRC_URI = "https://github.com/advancedtelematic/blinkenlights.git"
 # SRC_URI = "git@github.com:advancedtelematic/blinkenlights.git"
 
