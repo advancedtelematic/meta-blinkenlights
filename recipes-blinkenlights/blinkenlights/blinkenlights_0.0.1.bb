@@ -21,7 +21,7 @@ SYSTEMD_SERVICE_${PN} = "blinkenlights.service"
 
 FILES_${PN} = " ${systemd_system_unitdir}/blinkenlights.service "
 
-do_install_append() {
+do_install_append () {
    install -d ${D}${systemd_system_unitdir}
    install -m 0644 ${WORKDIR}/blinkenlights.service ${D}${systemd_system_unitdir}
 }
