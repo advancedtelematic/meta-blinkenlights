@@ -16,3 +16,5 @@ S = "${WORKDIR}/git"
 
 # DEPENDS_${PN} = "${PYTHON_PN}-modules"
 inherit setuptools pkgconfig
+
+RDEPENDS_${PN} = "python-dateutil rpi-gpio"
