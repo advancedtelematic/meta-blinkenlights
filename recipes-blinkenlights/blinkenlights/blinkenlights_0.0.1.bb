@@ -14,18 +14,19 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=c38a147657b98318df1f12ee6a660704"
 
 S = "${WORKDIR}/git"
 
+inherit setuptools pkgconfig systemd
+
 SYSTEMD_PACKAGES = "${PN}"
 SYSTEMD_SERVICE_${PN} = "blinkenlights.service"
 
 FILES_${PN} = " ${systemd_system_unitdir}/blinkenlights.service "
 
-do_install() {
+do_install_append() {
    install -d ${D}${systemd_system_unitdir}
    install -m 0644 ${WORKDIR}/blinkenlights.service ${D}${systemd_system_unitdir}
 }
 
 # DEPENDS_${PN} = "${PYTHON_PN}-modules"
-inherit setuptools pkgconfig systemd
 
 RDEPENDS_${PN} = "python-dateutil rpi-gpio"
 
