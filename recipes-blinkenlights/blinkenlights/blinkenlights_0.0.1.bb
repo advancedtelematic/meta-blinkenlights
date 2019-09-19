@@ -14,6 +14,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=c38a147657b98318df1f12ee6a660704"
 
 S = "${WORKDIR}/git"
 
+SYSTEMD_PACKAGES = "${PN}"
 SYSTEMD_SERVICE_${PN} = "blinkenlights.service"
 
 FILES_${PN} = " ${systemd_system_unitdir}/blinkenlights.service "
